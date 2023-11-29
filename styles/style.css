@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+:root{
+  --Moderate-blue: hsl(238, 40%, 52%);
+  --Soft-Red: hsl(358, 79%, 66%);
+  --Pale-red: hsl(357, 100%, 86%);
+  --Light-grayish-blue: hsl(239, 57%, 85%);
+
+    --Dark-blue: hsl(212, 24%, 26%);
+    --Grayish-Blue: hsl(211, 10%, 45%);
+    --Light-gray: hsl(223, 19%, 93%);
+    --Very-light-gray: hsl(228, 33%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+p{
+    line-height: 1.5;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    padding-top: 3rem; 
+    padding-bottom: 3.5rem; 
+    background-color: var(--Very-light-gray);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: var(--medium);
+}
+
+button:hover{
+    cursor: pointer;
+    filter: saturate(0.8);
+}
+
+.post_comment_btn{
+    background-color: var(--Moderate-blue);
+    color: var(--White);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.comment_section{
+    padding: 0 1rem;
+}
+
+.comments_box{
+    display: flex;
+    flex-direction: column;
+}
+
+.comment{
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-areas: none
+        "score user controls"
+        "score comment comment"
+        "score comment comment";
+    grid-template-columns: auto 1fr auto;
+    gap: 1,5rem;
+    row-gap: 1rem;
+    color: var(--Grayish-Blue);
+}
+
+.c_score{
+    color: var(--Moderate-blue);
+    font-weight: var(--medium);
+    grid-area: score;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.75rem;
+    width: 1rem;
+    box-sizing: content-box;
+    background-color: var(--Very-light-gray);
+    border-radius: 8px;
+    align-self: flex-start;
+}
+
+.score_control{
+    width: 100%;
+    cursor: pointer;
+    object-fit: scale-down;
+}
+
+.c_text{
+    grid-area: comment;
+    width: 100%;
+}
+
+.c_user{
+    
+}
