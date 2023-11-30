@@ -169,7 +169,7 @@ button:hover{
     grid-template-columns: min-content auto min-content;
     justify-items: center;
     gap: 1rem;
-   /* min-height: 9rem;*/
+    min-height: 8rem;
 }
 
 .reply_input img{
@@ -261,4 +261,45 @@ button:hover{
 .modal .no{
     background-color: var(--Grayish-Blue);
     grid-area: no;
+}
+
+@media screen and (max-width:640px) {
+    .container{
+        padding: .75rem;
+    }
+    .replies{
+        padding-left: 1rem;
+        margin-left: .5rem;
+    }
+    .comment{
+        grid-template-areas: 
+            "user user user"
+            "comment comment comment"
+            "score ... controls"
+        ;
+
+        gap: .5rem;
+    }
+    .c-score{
+        flex-direction: row;
+        width: auto;
+    }
+    .reply-input{
+        grid-template-areas: 
+            "input input input"
+            "avatar ... button"
+        ;
+        grid-template-rows: auto min-content;
+        align-items: center;
+        gap: .5rem;
+    }
+    .reply-input img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .reply-input textarea{
+        height: 6rem;
+        padding: .5rem;
+        align-self: stretch;
+    }
 }
