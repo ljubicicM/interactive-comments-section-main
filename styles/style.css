@@ -105,5 +105,160 @@ button:hover{
 }
 
 .c_user{
-    
+    width: 100%;
+    grid-area: user;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.user_name{
+    color: var(--Dark-blue);
+    font-weight: var(--semibold);
+}
+
+.user_img{
+    height: 2rem;
+    width: 2rem;
+}
+
+.c_function{
+    grid-area: controls;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-self: center;
+}
+
+.c_function a{
+    align-items: center;   
+}
+
+.edit , .reply{
+    color: var(--Moderate-blue); 
+}
+
+.edit{
+    display: none;
+}
+
+.del{
+    color: var(--Soft-Red);
+    display: none;
+}
+
+.fun_icon{
+    margin-right: .5rem;
+}
+
+.replies{
+    display: flex;
+    margin-left: 2.5rem;
+    padding-left: 2.5rem;
+    border-left: 1px solid var(--Light-grayish-blue);
+}
+
+.re_to{
+    color: var(--Moderate-blue);
+    font-weight: var(--medium);
+}
+
+.reply_input{
+    display: grid;
+    grid-template-areas: "avatar input button";
+    grid-template-columns: min-content auto min-content;
+    justify-items: center;
+    gap: 1rem;
+   /* min-height: 9rem;*/
+}
+
+.reply_input img{
+    grid-area: avatar;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.reply_input button{
+    grid-area: button;
+    align-self: flex-start;
+}
+
+.reply_input textarea{
+    grid-area: input;
+    padding: 1rem;
+    border : 1px solid var(--Light-gray);
+    width: 100%;
+    border-radius: 5px;
+    resize: none;   
+}
+
+.this-user .usr-name::after{
+    font-weight: 400;
+    content: "you";
+    color: var(--White);
+    background-color: var(--Moderate-blue);
+    padding: 0 .4rem;
+    padding-bottom: .2rem;
+    font-size: .8rem;
+    margin-left: .5rem;
+    border-radius: 2px;
+}
+
+.this-user .reply{
+    display: none;
+}
+.this-user .edit , .this-user .delete{
+    display: flex;
+}
+
+.modal-wrp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.3);
+}
+
+.modal{
+    padding: 1.5rem;
+    max-width: 32ch;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    "heading heading"
+    "body body"
+    "no yes";
+}
+
+.invisible{
+    display: none;
+}
+
+.modal h3{
+    grid-area: heading;
+    color: var(--Dark-blue);
+}
+.modal button{
+    color: var(--White);
+    padding: .75rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 500;
+}
+.modal p{
+    grid-area: body;
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+}
+.modal .yes{
+    grid-area: yes;
+    background-color: var(--Soft-Red);
+}
+.modal .no{
+    background-color: var(--Grayish-Blue);
+    grid-area: no;
 }
