@@ -32,8 +32,12 @@ body {
     height: 100%;
     width: 100%;
     padding-top: 3rem; 
-    padding-bottom: 3.5rem; 
     background-color: var(--Very-light-gray);
+}
+.container{
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: var(--White);
 }
 
 a {
@@ -57,6 +61,9 @@ button:hover{
 
 .comment_section{
     padding: 0 1rem;
+    max-width: 75ch;
+    margin: auto;
+    margin-top: 1rem;
 }
 
 .comments_box{
@@ -128,6 +135,7 @@ button:hover{
     gap: 1rem;
     align-items: center;
     justify-self: center;
+    color: var(--Moderate-blue);
 }
 
 .c_function a{
@@ -188,7 +196,7 @@ button:hover{
     padding: 1rem;
     border : 1px solid var(--Light-gray);
     width: 100%;
-    border-radius: 5px;
+    border-radius: 4px;
     resize: none;   
 }
 
@@ -207,11 +215,11 @@ button:hover{
 .this-user .reply{
     display: none;
 }
-.this-user .edit , .this-user .delete{
+.this-user .edit , .this-user .del{
     display: flex;
 }
 
-.modal-wrp{
+.del_wrp{
     position: fixed;
     top: 0;
     left: 0;
@@ -223,7 +231,7 @@ button:hover{
     background-color: rgba(0,0,0,.3);
 }
 
-.modal{
+.del_container{
     padding: 1.5rem;
     max-width: 32ch;
     display: grid;
@@ -238,27 +246,27 @@ button:hover{
     display: none;
 }
 
-.modal h3{
+.del_container h3{
     grid-area: heading;
     color: var(--Dark-blue);
 }
-.modal button{
+.del_container button{
     color: var(--White);
     padding: .75rem;
     border-radius: 8px;
     border: none;
     font-weight: 500;
 }
-.modal p{
+.del_container p{
     grid-area: body;
     color: var(--Grayish-Blue);
     line-height: 1.5;
 }
-.modal .yes{
+.del_container .yes{
     grid-area: yes;
     background-color: var(--Soft-Red);
 }
-.modal .no{
+.del_container .no{
     background-color: var(--Grayish-Blue);
     grid-area: no;
 }
@@ -280,11 +288,11 @@ button:hover{
 
         gap: .5rem;
     }
-    .c-score{
+    .c_score{
         flex-direction: row;
         width: auto;
     }
-    .reply-input{
+    .reply_input{
         grid-template-areas: 
             "input input input"
             "avatar ... button"
@@ -293,11 +301,11 @@ button:hover{
         align-items: center;
         gap: .5rem;
     }
-    .reply-input img{
+    .reply_input img{
         height: 2rem;
         width: 2rem;
     }
-    .reply-input textarea{
+    .reply_input textarea{
         height: 6rem;
         padding: .5rem;
         align-self: stretch;
