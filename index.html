@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Interactive comments section</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
 
   <template class="reply_template">
@@ -19,7 +22,7 @@
     </div>
   </template>
 
-  <template>
+  <template class="comment_template">
     <div class="comment_wrp">
       <div class="comment container">
         <div class="c_score">
@@ -37,10 +40,10 @@
           <p class="user_name"></p>
           <p class="comment_ago"></p>
         </div>
-          <p class="c_text">
-            <span class="re_to"></span>
-            <span class="c_body"></span>
-          </p>
+        <p class="c_text">
+          <span class="re_to"></span>
+          <span class="c_body"></span>
+        </p>
       </div>
       <div class="replies comments_box">
       </div>
@@ -48,10 +51,10 @@
   </template>
 
   <main>
-    
+
     <div class="comment_section">
       <div class="comments_box">
-  
+
       </div>
 
       <div class="reply_input container">
@@ -59,7 +62,7 @@
         <textarea class="comment_input" placeholder="Add a comment..."></textarea>
         <button class="post_comment_btn">Send</button>
       </div>
-  </div>
+    </div>
     <div class="del_wrp invisible">
       <div class="del_container container">
         <h2>Delete comment</h2>
@@ -71,7 +74,8 @@
       </div>
     </div>
 
-</main>
+  </main>
   <script src="scripts/app.js"></script>
 </body>
+
 </html>
