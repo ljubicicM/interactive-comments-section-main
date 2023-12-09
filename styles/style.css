@@ -83,7 +83,7 @@ button:hover{
         "score comment comment"
         "score comment comment";
     grid-template-columns: auto 1fr auto;
-    gap: 1,5rem;
+    gap: 1.5rem;
     row-gap: 1rem;
     color: var(--Grayish-Blue);
 }
@@ -181,7 +181,8 @@ button:hover{
     grid-template-columns: min-content auto min-content;
     justify-items: center;
     gap: 1rem;
-    min-height: 8rem;
+    min-height: 9rem;
+    margin-bottom: 1rem;
 }
 
 .reply_input img{
@@ -259,18 +260,18 @@ button:hover{
     padding: .75rem;
     border-radius: 8px;
     border: none;
-    font-weight: 500;
+    font-weight: var(--medium);
 }
 .del_container p{
     grid-area: body;
     color: var(--Grayish-Blue);
     line-height: 1.5;
 }
-.del_container .yes{
+.del_container .del_yes{
     grid-area: yes;
     background-color: var(--Soft-Red);
 }
-.del_container .no{
+.del_container .del_no{
     background-color: var(--Grayish-Blue);
     grid-area: no;
 }
